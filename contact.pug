@@ -61,12 +61,12 @@ article#termine.content-contact
         tr
           td Anmeldung
           td
-            strong {{ course.application[0].institution }}
+            strong {{ course.application.institution }}
             br
             strong Telefon: 
-            | {{ course.application[0].tel }}
+            | {{ course.application.tel }}
             br
             strong E-Mail: 
-            | {{ course.application[0].email }}
+            | {{ course.application.email }}
             br
   | {% endfor %}
