@@ -79,12 +79,12 @@ collections:
                     fields:
                       - {label: Dauer, name: duration, widget: number}
                       - {label: Preis, name: price, widget: number}
-                      - label: Lang
-                        name: long
-                        widget: object
-                        fields:
-                          - {label: Dauer, name: duration, widget: number}
-                          - {label: Preis, name: price, widget: number}
+                  - label: Lang
+                    name: long
+                    widget: object
+                    fields:
+                      - {label: Dauer, name: duration, widget: number}
+                      - {label: Preis, name: price, widget: number}
               - label: Autogenes Training
                 name: autogenic_training
                 widget: object
@@ -95,9 +95,9 @@ collections:
                     fields:
                       - {label: Dauer, name: duration, widget: string}
                       - {label: Preis, name: price, widget: number}
-                      - label: Gruppentraining
-                        name: group
-                        widget: object
-                        fields:
-                          - {label: Dauer, name: duration, widget: string}
-                          - {label: Preis, name: price, widget: number}
+                  - label: Gruppentraining
+                    name: group
+                    widget: object
+                    fields:
+                      - {label: Dauer, name: duration, widget: string}
+                      - {label: Preis, name: price, widget: number}
