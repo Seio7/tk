@@ -6,7 +6,7 @@ collections:
   - name: "config"
     label: "Einstellungen"
     editor:
-      preview: true
+      preview: false
     files:
       - label: "Navigation"
         name: "navigation"
@@ -38,12 +38,12 @@ collections:
               - {label: Datum, name: date, widget: datetime, dateFormat: true}
               - {label: Uhrzeit, name: time, widget: string}
               - {label: Kursdauer, name: duration, widget: string}
-              - {label: Preis, name: price, widget: Number}
+              - {label: Preis, name: price, widget: number}
               - {label: Ort, name: location, widget: markdown}
               - {label: Extra Info, name: extra_info, widget: string, required: false}
               - label: Anmeldung
                 name: application
-                widget: object
+                widget: list
                 fields:
                   - {label: Ort, name: institution, widget: string}
                   - {label: Telefon, name: tel, widget: string}
@@ -61,14 +61,14 @@ collections:
                 name: anamnesis
                 widget: object
                 fields:
-                  - {label: Dauer, name: duration, widget: Number}
-                  - {label: Preis, name: price, widget: Number}
+                  - {label: Dauer, name: duration, widget: number}
+                  - {label: Preis, name: price, widget: number}
               - label: Coaching
                 name: coaching
                 widget: object
                 fields:
-                  - {label: Dauer, name: duration, widget: Number}
-                  - {label: Preis, name: price, widget: Number}
+                  - {label: Dauer, name: duration, widget: number}
+                  - {label: Preis, name: price, widget: number}
               - label: Psychotherapie
                 name: therapy
                 widget: object
@@ -77,14 +77,14 @@ collections:
                     name: short
                     widget: object
                     fields:
-                      - {label: Dauer, name: duration, widget: Number}
-                      - {label: Preis, name: price, widget: Number}
+                      - {label: Dauer, name: duration, widget: number}
+                      - {label: Preis, name: price, widget: number}
                   - label: Lang
                     name: long
                     widget: object
                     fields:
-                      - {label: Dauer, name: duration, widget: Number}
-                      - {label: Preis, name: price, widget: Number}
+                      - {label: Dauer, name: duration, widget: number}
+                      - {label: Preis, name: price, widget: number}
               - label: Autogenes Training
                 name: autogenic_training
                 widget: object
@@ -94,10 +94,10 @@ collections:
                     widget: object
                     fields:
                       - {label: Dauer, name: duration, widget: string}
-                      - {label: Preis, name: price, widget: Number}
+                      - {label: Preis, name: price, widget: number}
                   - label: Gruppentraining
                     name: group
                     widget: object
                     fields:
                       - {label: Dauer, name: duration, widget: string}
-                      - {label: Preis, name: price, widget: Number}
+                      - {label: Preis, name: price, widget: number}
