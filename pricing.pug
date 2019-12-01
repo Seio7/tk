@@ -10,28 +10,28 @@ article.content-pricing
   section.pricing-container.indented
     .initial-interview
       h4 Erstgespräch
-      | {% assign anamnesis = site.data.propositions.items[0].anamnesis[0] %}
+      | {% assign anamnesis = site.data.propositions.items.anamnesis %}
       p {{ anamnesis.duration }} Minuten - #[strong {{ anamnesis.price }} €]
     .coaching
       h4 Coaching**
-      | {% assign coaching = site.data.propositions.items[1].coaching[0] %}
+      | {% assign coaching = site.data.propositions.items.coaching %}
       p {{ coaching.duration }} Minuten - #[strong {{ coaching.price }} €]
     .therapy
       h4 Psychotherpie*
-      | {% assign therapy = site.data.propositions.items[2].therapy %}
-      p {{ therapy[0].short[0].duration }} Minuten - #[strong {{ therapy[0].short[0].price }} €]
+      | {% assign therapy = site.data.propositions.items.therapy %}
+      p {{ therapy.short.duration }} Minuten - #[strong {{ therapy.short.price }} €]
         br
-        | {{ therapy[1].long[0].duration }} Minuten - #[strong {{ therapy[1].long[0].price }} €]
+        | {{ therapy.long.duration }} Minuten - #[strong {{ therapy.long.price }} €]
     .autogenic-training
       h4 Autogenes Training*
-      | {% assign autogenic_training = site.data.propositions.items[3].autogenic_training %}
+      | {% assign autogenic_training = site.data.propositions.items.autogenic_training %}
       .autogenic-training-pricing
         div
           span Einzel-Training:
-          span {{ autogenic_training[0].private[0].duration }} - #[strong {{ autogenic_training[0].private[0].price }} €]
+          span {{ autogenic_training.private.duration }} - #[strong {{ autogenic_training.private.price }} €]
         div
           span Gruppen-Training:
-          span {{ autogenic_training[1].group[0].duration }} - #[strong {{ autogenic_training[1].group[0].price }} €]
+          span {{ autogenic_training.group.duration }} - #[strong {{ autogenic_training.group.price }} €]
     .tax-container
       span.tax.tax-ex * von der Mehrwertsteuer befreit
       span.tax.tax-inc ** beinhaltet 19% Mehrwertsteuer

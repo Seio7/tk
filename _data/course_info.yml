@@ -7,9 +7,9 @@ courses:
     location: '"Sonnenwirt", Elsenheimer Str. 27 in 85283 Wolnzach'
     extra_info: "Kleingruppe mit max. 8 Personen"
     application:
-      - institution: "VHS Wolnzach"
-        tel: "08442 - 915408"
-        email: "buecherei@wolnzach.de"
+      institution: "VHS Wolnzach"
+      tel: "08442 - 915408"
+      email: "buecherei@wolnzach.de"
   - title: "Kurs VHS Wolnzach - Abend"
     date: "10.10.2019"
     time: "19:00 - 20:15 Uhr"
@@ -18,6 +18,6 @@ courses:
     location: '"Sonnenwirt", Elsenheimer Str. 27 in 85283 Wolnzach'
     extra_info: "Kleingruppe mit max. 8 Personen"
     application:
-      - institution: "VHS Wolnzach"
-        tel: "08442 - 915408"
-        email: "buecherei@wolnzach.de"
+      institution: "VHS Wolnzach"
+      tel: "08442 - 915408"
+      email: "buecherei@wolnzach.de"
