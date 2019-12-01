@@ -21,3 +21,14 @@ courses:
     price: 45
     time: '19:00 - 20:15 Uhr'
     title: Kurs VHS Wolnzach - Abend
+  - application:
+      email: ewiejw@dasdw.de
+      institution: hier
+      tel: '929323'
+    date: 19.12.2019
+    duration: 8 x 75 Minuten
+    extra_info: extra info
+    location: Testort
+    price: 55
+    time: '09:30 - 10:30 Uhr'
+    title: Testkurs
