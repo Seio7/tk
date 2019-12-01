@@ -1,0 +1,21 @@
+nav:
+  - title: Startseite
+    url: "/"
+  - title: Mein Angebot
+    children:
+      - title: Gesprächstherapie
+        url: "/mein-angebot/gespraechstherapie"
+      - title: Coaching
+        url: "/mein-angebot/coaching"
+      - title: Autogenes Training
+        url: "/mein-angebot/autogenes-training"
+  - title: Ablauf
+    url: "/ablauf"
+  - title: Symptome
+    url: "/symptome"
+  - title: Über mich
+    url: "/ueber-mich"
+  - title: Kosten
+    url: "/kosten"
+  - title: Kontakt & Termine
+    url: "/kontakt-und-termine"

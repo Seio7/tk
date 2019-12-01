@@ -1,0 +1,72 @@
+---
+layout: page
+permalink: "/kontakt-und-termine"
+title: Kontakt und Termine
+description: Sie können mit mir von Montag bis Freitag von 7.00 bis 19.00 Uhr Termine individuell vereinbaren. Kurzfristige Terminvereinbarungen sind in der Regel möglich.
+---
+
+article.therapy-and-coaching.content-contact
+  h2 Psychotherapie & Coaching
+  section
+    .contact-info
+      p Sie können mit mir von 
+        strong Montag bis Freitag von 7.00 bis 19.00 Uhr
+        |  Termine individuell vereinbaren.
+        |  Kurzfristige Terminvereinbarungen sind in der Regel möglich.
+      .flex-container
+        .info
+          div
+            strong Email
+          div
+            a(href="mailto:{{ site.email }}") {{ site.email }}
+        .info
+          div
+            strong Telefon
+          div
+            a(href="{{ site.tel_link }}") {{ site.tel }}
+        .info
+          div
+            strong Online Terminvereinbarung
+          a(href="/online-terminkalender") › Zum Terminkalender
+  section
+    p
+      strong Hausbesuche:
+      br
+      | Sie fühlen sich nicht gut genug, um in meine Praxis zu kommen? Dann besuche ich Sie gerne zu Hause. Als Kilometer-Pauschale berechne ich innerhalb Wolnzach-Markt keine Anfahrt, in die Gemeinde-Gebiete eine Anfahrts-Pauschale von 5€. Für Fahrten in andere Ortschaften wird die Anfahrt, je nach Kilometer, vorab individuell vereinbart.
+    p
+      strong Termin-Absagen:
+      br
+      | Wenn vereinbarte Termin von Ihrer Seite nicht eingehalten werden können, dann sagen Sie bitte spätestens bis zum Abend vor Ihrem Termin am nächsten Tag ab. Sie sagen den Termin nicht ab, dann behalte ich mir vor, Ihnen diese Ausfallzeit in Rechnung in Rechnung zu stellen.
+hr.border-bottom-dotted
+article#termine.content-contact
+  h2 Autogenes Training
+  | {% for course in site.data.course_info.courses %}
+  section
+    h4 {{ course.title }}
+    table
+      tbody
+        tr
+          td Beginn
+          td {{ course.date }}, {{ course.time }}
+        tr
+          td Kursdauer & Kosten
+          td {{ course.duration }} - #[strong {{ course.price }} €]
+        tr
+          td Kursort
+          td {{ course.location }}
+            | {% if course.extra_info != empty %}
+            br
+            strong {{ course.extra_info }}
+            | {% endif %}
+        tr
+          td Anmeldung
+          td
+            strong {{ course.application[0].institution }}
+            br
+            strong Telefon: 
+            | {{ course.application[0].tel }}
+            br
+            strong E-Mail: 
+            | {{ course.application[0].email }}
+            br
+  | {% endfor %}

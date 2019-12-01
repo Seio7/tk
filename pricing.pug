@@ -1,0 +1,55 @@
+---
+layout: page
+permalink: "/kosten"
+title: Kosten
+description: Hier finden Sie alles was Sie über meine Leistungen wissen müssen. Sie benötigen Hilfe, können sich aber das Honorar meiner Privat-Praxis nicht leisten? Sprechen Sie vertrauensvoll mit mir, wir werden eine Lösung finden!
+---
+
+article.content-pricing
+  h1 Kosten
+  section.pricing-container.indented
+    .initial-interview
+      h4 Erstgespräch
+      | {% assign anamnesis = site.data.propositions.items[0].anamnesis[0] %}
+      p {{ anamnesis.duration }} Minuten - #[strong {{ anamnesis.price }} €]
+    .coaching
+      h4 Coaching**
+      | {% assign coaching = site.data.propositions.items[1].coaching[0] %}
+      p {{ coaching.duration }} Minuten - #[strong {{ coaching.price }} €]
+    .therapy
+      h4 Psychotherpie*
+      | {% assign therapy = site.data.propositions.items[2].therapy %}
+      p {{ therapy[0].short[0].duration }} Minuten - #[strong {{ therapy[0].short[0].price }} €]
+        br
+        | {{ therapy[1].long[0].duration }} Minuten - #[strong {{ therapy[1].long[0].price }} €]
+    .autogenic-training
+      h4 Autogenes Training*
+      | {% assign autogenic_training = site.data.propositions.items[3].autogenic_training %}
+      .autogenic-training-pricing
+        div
+          span Einzel-Training:
+          span {{ autogenic_training[0].private[0].duration }} - #[strong {{ autogenic_training[0].private[0].price }} €]
+        div
+          span Gruppen-Training:
+          span {{ autogenic_training[1].group[0].duration }} - #[strong {{ autogenic_training[1].group[0].price }} €]
+    .tax-container
+      span.tax.tax-ex * von der Mehrwertsteuer befreit
+      span.tax.tax-inc ** beinhaltet 19% Mehrwertsteuer
+  .trouble-notice
+    p
+      strong Sie benötigen Hilfe, können sich aber das Honorar meiner Privat-Praxis nicht leisten?
+      br
+      | Sprechen Sie vertrauensvoll mit mir, wir werden eine Lösung finden!
+hr.border-bottom-dotted
+article
+  h2 Kostenerstattung
+  section
+    p
+      strong Psychotherapie & Coaching
+      br
+      | Gesetzliche Krankenkassen übernehmen die Kosten für ein Coaching nicht und in der Regel für eine Psychotherapie in meiner Privatpraxis als Heilpraktikerin für Psychotherapie HPG leider auch nicht. Private Krankenversicherungen und Kranken-Zusatzversicherungen (je nach abgeschlossenem Vertrag) übernehmen die Kosten meist anteilig. Informieren Sie sich aber gerne vorab bei Ihrer Versicherung.
+  section
+    p
+      strong Autogenes Training
+      br
+      | Die Krankenkassen übernehmen die Kosten für ein Autogenes Training in der Regel nur für ausgewählte kassenzugelassene Trainer, wozu ich derzeit nicht gehöre. Private Krankenversicherungen und Kranken-Zusatzversicherungen (je nach abgeschlossenem Vertrag) übernehmen die Kosten meist anteilig. Informieren Sie sich aber gerne vorab bei Ihrer Versicherung.

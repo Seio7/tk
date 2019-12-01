@@ -1,0 +1,18 @@
+section.info-header-container.mobile-hidden
+  .container
+    .info-header
+      .info.email-address
+        span.icon-email
+        a(href="mailto:{{ site.email }}") {{ site.email }}
+      .info.tel-number
+        span.icon-tel
+        a(href="{{ site.tel_link }}") {{ site.tel }}
+      .spacer
+      a.emergency(href="/notfall") Notfall
+      a(href="/online-terminkalender")
+        button.btn-cta Termin vereinbaren
+section.brand-area-container.mobile-hidden
+  .container
+    .brand-area
+      a.logo-container(href="/")
+        img.logo(src="{{ 'assets/images/logo.png' | relative_url }}" alt="Praxis für emotionale Gesundheit Logo")

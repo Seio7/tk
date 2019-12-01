@@ -1,0 +1,13 @@
+---
+---
+
+doctype html
+html(lang="de")
+  include head
+  body(class="{{ page.title }}")
+    include header
+    include nav
+    | {{ content }}
+    include footer
+
+    script(type="text/javascript" src="{{ '/assets/js/navigation.js' | relative_url }}")

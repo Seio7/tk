@@ -1,0 +1,24 @@
+nav.main-nav
+  .container
+    .main-navigation
+      a.logo-container(href="/")
+        img.logo(src="{{ '/assets/images/logo.png' | relative_url }}" alt="Praxis für emotionale Gesundheit Logo")
+      button.menu-toggle(aria-controls="primary-menu" aria-expanded="false")
+        span.line.line-top
+        span.line.line-middle
+        span.line.line-bottom
+      .main-navigation-menu
+        ul.menu
+          | {%- for menu_item in site.data.navigation.nav -%}
+          | {%- if menu_item.children == nil -%}
+          li(class="menu-item {% if menu_item.url == page.url %}current-menu-item{% endif %}")
+            a(href="{{ menu_item.url | relative_url }}") {{ menu_item.title | escape }}
+          | {%- else -%}
+          li(class="menu-item menu-item-has-children") {{ menu_item.title | escape }}
+            ul.sub-menu
+              | {%- for sub_menu_item in menu_item.children -%}
+              li(class="menu-item {% if sub_menu_item.url == page.url %}current-menu-item{% endif %}")
+                a(href="{{ sub_menu_item.url | relative_url }}") {{ sub_menu_item.title | escape }}
+              | {%- endfor -%}
+          | {%- endif -%}
+          | {%- endfor -%}
