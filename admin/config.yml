@@ -53,51 +53,51 @@ collections:
         name: "propositions"
         file: "_data/propositions.yml"
         fields:
-          - label: "Preise"
-            name: "propositions"
-            widget: "object"
-            fields:
-              - label: Erstgespräch
-                name: anamnesis
+          label: "Preise"
+          name: "propositions"
+          widget: "object"
+          fields:
+            - label: Erstgespräch
+              name: anamnesis
+              widget: object
+              fields:
+                - {label: Dauer, name: duration, widget: number}
+                - {label: Preis, name: price, widget: number}
+            - label: Coaching
+              name: coaching
+              widget: object
+              fields:
+                - {label: Dauer, name: duration, widget: number}
+                - {label: Preis, name: price, widget: number}
+            - label: Psychotherapie
+              name: therapy
+              widget: object
+              fields:
+                label: Kurz
+                name: short
                 widget: object
                 fields:
                   - {label: Dauer, name: duration, widget: number}
                   - {label: Preis, name: price, widget: number}
-              - label: Coaching
-                name: coaching
+                label: Lang
+                name: long
                 widget: object
                 fields:
                   - {label: Dauer, name: duration, widget: number}
                   - {label: Preis, name: price, widget: number}
-              - label: Psychotherapie
-                name: therapy
+            - label: Autogenes Training
+              name: autogenic_training
+              widget: object
+              fields:
+                label: Einzeltraining
+                name: private
                 widget: object
                 fields:
-                  - label: Kurz
-                    name: short
-                    widget: object
-                    fields:
-                      - {label: Dauer, name: duration, widget: number}
-                      - {label: Preis, name: price, widget: number}
-                  - label: Lang
-                    name: long
-                    widget: object
-                    fields:
-                      - {label: Dauer, name: duration, widget: number}
-                      - {label: Preis, name: price, widget: number}
-              - label: Autogenes Training
-                name: autogenic_training
+                  - {label: Dauer, name: duration, widget: string}
+                  - {label: Preis, name: price, widget: number}
+                label: Gruppentraining
+                name: group
                 widget: object
                 fields:
-                  - label: Einzeltraining
-                    name: private
-                    widget: object
-                    fields:
-                      - {label: Dauer, name: duration, widget: string}
-                      - {label: Preis, name: price, widget: number}
-                  - label: Gruppentraining
-                    name: group
-                    widget: object
-                    fields:
-                      - {label: Dauer, name: duration, widget: string}
-                      - {label: Preis, name: price, widget: number}
+                  - {label: Dauer, name: duration, widget: string}
+                  - {label: Preis, name: price, widget: number}
