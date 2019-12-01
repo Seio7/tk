@@ -1,4 +1,6 @@
 nav:
+  - title: Startseite
+    url: /
   - children:
       - title: Gesprächstherapie
         url: /mein-angebot/gespraechstherapie
@@ -7,8 +9,6 @@ nav:
       - title: Autogenes Training
         url: /mein-angebot/autogenes-training
     title: Mein Angebot
-  - title: Startseite
-    url: /
   - title: Ablauf
     url: /ablauf
   - title: Symptome
