@@ -4,9 +4,9 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - name: "config"
-    label: "Config"
+    label: "Einstellungen"
     editor:
-      preview: false
+      preview: true
     files:
       - label: "Navigation"
         name: "navigation"
@@ -17,14 +17,87 @@ collections:
             widget: "list"
             fields:
               - {label: Name, name: title, widget: string}
-              - {label: Link, name: url, widget: string}
-    # - label: "Kurstermine"
-    #   name: "course_info"
-    #   file: "_data/course_info.yml"
-    #   fields:
-    #     - label: "Kurstermine"
-    #       name: "courses"
-    #       widget: "list"
-    #       fields:
-    #         - {label: Titel, name: title, widget: markdown}
-    #         - {label: Datum, name: date, widget: datetime}
+              - {label: Link, name: url, widget: string, required: false}
+              - label: Unterseiten
+                name: children
+                widget: list
+                required: false
+                fields:
+                  - {label: Name, name: title, widget: string}
+                  - {label: Link, name: url, widget: string}
+
+      - label: "Kurstermine"
+        name: "course_info"
+        file: "_data/course_info.yml"
+        fields:
+          - label: "Kurstermine"
+            name: "courses"
+            widget: "list"
+            fields:
+              - {label: Titel, name: title, widget: markdown}
+              - {label: Datum, name: date, widget: datetime, dateFormat: true}
+              - {label: Uhrzeit, name: time, widget: string}
+              - {label: Kursdauer, name: duration, widget: string}
+              - {label: Preis, name: price, widget: Number}
+              - {label: Ort, name: location, widget: markdown}
+              - {label: Extra Info, name: extra_info, widget: string, required: false}
+              - label: Anmeldung
+                name: application
+                widget: object
+                fields:
+                  - {label: Ort, name: institution, widget: string}
+                  - {label: Telefon, name: tel, widget: string}
+                  - {label: Email, name: email, widget: string}
+
+      - label: "Preise"
+        name: "propositions"
+        file: "_data/propositions.yml"
+        fields:
+          - label: "Preise"
+            name: "propositions"
+            widget: "object"
+            fields:
+              - label: Erstgespräch
+                name: anamnesis
+                widget: object
+                fields:
+                  - {label: Dauer, name: duration, widget: Number}
+                  - {label: Preis, name: price, widget: Number}
+              - label: Coaching
+                name: coaching
+                widget: object
+                fields:
+                  - {label: Dauer, name: duration, widget: Number}
+                  - {label: Preis, name: price, widget: Number}
+              - label: Psychotherapie
+                name: therapy
+                widget: object
+                fields:
+                  - label: Kurz
+                    name: short
+                    widget: object
+                    fields:
+                      - {label: Dauer, name: duration, widget: Number}
+                      - {label: Preis, name: price, widget: Number}
+                  - label: Lang
+                    name: long
+                    widget: object
+                    fields:
+                      - {label: Dauer, name: duration, widget: Number}
+                      - {label: Preis, name: price, widget: Number}
+              - label: Autogenes Training
+                name: autogenic_training
+                widget: object
+                fields:
+                  - label: Einzeltraining
+                    name: private
+                    widget: object
+                    fields:
+                      - {label: Dauer, name: duration, widget: string}
+                      - {label: Preis, name: price, widget: Number}
+                  - label: Gruppentraining
+                    name: group
+                    widget: object
+                    fields:
+                      - {label: Dauer, name: duration, widget: string}
+                      - {label: Preis, name: price, widget: Number}
