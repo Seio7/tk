@@ -1,5 +1,5 @@
 courses:
-  - title: "Kurs VHS Wolnzach - <b>Vormittag</b>"
+  - title: "Kurs VHS Wolnzach - Vormittag"
     date: "09.10.2019"
     time: "09:30 - 10:45 Uhr"
     duration: "8 x 75 Minuten"
@@ -10,7 +10,7 @@ courses:
       - institution: "VHS Wolnzach"
         tel: "08442 - 915408"
         email: "buecherei@wolnzach.de"
-  - title: "Kurs VHS Wolnzach - <b>Abend</b>"
+  - title: "Kurs VHS Wolnzach - Abend"
     date: "10.10.2019"
     time: "19:00 - 20:15 Uhr"
     duration: "8 x 75 Minuten"
