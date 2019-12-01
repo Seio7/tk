@@ -12,12 +12,12 @@ collections:
         name: "navigation"
         file: "_data/navigation.yml"
         fields:
-          - label: "Navigations Links"
+          - label: "Links"
             name: "nav"
             widget: "list"
             fields:
               - {label: Name, name: title, widget: string}
-              - {label: Link, name: link, widget: string}
+              - {label: Link, name: url, widget: string}
     # - label: "Kurstermine"
     #   name: "course_info"
     #   file: "_data/course_info.yml"
