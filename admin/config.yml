@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: 'assets/uploads'
+collections:
+  - name: "config"
+    label: "Config"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Navigations Links"
+            name: "nav"
+            widget: "list"
+            fields:
+              - {label: Name, name: title, widget: string}
+              - {label: Link, name: link, widget: string}
+    # - label: "Kurstermine"
+    #   name: "course_info"
+    #   file: "_data/course_info.yml"
+    #   fields:
+    #     - label: "Kurstermine"
+    #       name: "courses"
+    #       widget: "list"
+    #       fields:
+    #         - {label: Titel, name: title, widget: markdown}
+    #         - {label: Datum, name: date, widget: datetime}
