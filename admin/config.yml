@@ -35,7 +35,7 @@ collections:
             widget: "list"
             fields:
               - {label: Titel, name: title, widget: string}
-              - {label: Datum, name: date, widget: datetime, dateFormat: true, timeFormat: false, format: DD.MM.YYYY}
+              - {label: Datum, name: date, widget: datetime, timeFormat: false, format: DD.MM.YYYY}
               - {label: Uhrzeit, name: time, widget: string}
               - {label: Kursdauer, name: duration, widget: string}
               - {label: Preis, name: price, widget: number}
@@ -54,7 +54,7 @@ collections:
         file: "_data/propositions.yml"
         fields:
           - label: "Preise"
-            name: "propositions"
+            name: "items"
             widget: "object"
             fields:
               - label: Erstgespräch
