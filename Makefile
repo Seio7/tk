@@ -1,3 +1,3 @@
 netlify:
-  npm install pug -g
-  jekyll build
+	npm install pug -g
+	jekyll build
