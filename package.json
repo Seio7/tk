@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack --watch | bundle exec jekyll serve --livereload",
-    "build": "./node_modules/.bin/webpack | bundle exec jekyll build"
+    "build": "cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
