@@ -4,8 +4,10 @@
     display: none;
     text-align: center;
     position: fixed;
+    width: 100%;
     bottom: 0;
-    width: calc(100% - 2rem);
+    left: 0;
+    right: 0;
     background: #006724;
     color: rgba(255, 255, 255, 0.8);
   }
@@ -35,6 +37,11 @@
     #cookie-notice a {
       position: relative;
       bottom: 4px;
+    }
+
+    #cookie-notice {
+      top: 0;
+      bottom: initial;
     }
   }
 
