@@ -1,10 +1,8 @@
-
-
 const path = require("path");
 
 module.exports = {
   mode: "production",
-  watch: true,
+  watch: false,
   entry: path.join(__dirname, "webpack", "js", "main"),
   output: {
     filename: "[name]-bundle.js",
