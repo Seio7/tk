@@ -1,3 +1,3 @@
 netlify:
-	npm install pug -g
-	JEKYLL_ENV=production jekyll build
+	npm install
+	npm build

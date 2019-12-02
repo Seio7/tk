@@ -1,10 +1,4 @@
-/**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
-(function () {
+export default function initNavigation() {
   var container, button, menu, links, i, len;
 
   container = document.querySelector('.main-navigation');
@@ -136,10 +130,9 @@
     });
 
     element.addEventListener('transitionend', function (e) {
-      element.removeEventListener('transitionend', arguments.callee);
       toggleMenu();
       element.classList.remove('in-transition');
-    });
+    }, {once: true});
   }
 
   function expandSection(element) {
@@ -149,10 +142,9 @@
     element.style.height = sectionHeight + 'px';
 
     element.addEventListener('transitionend', function (e) {
-      element.removeEventListener('transitionend', arguments.callee);
       element.style.height = sectionHeight + 'px';
       element.classList.remove('in-transition');
-    });
+    }, {once: true});
   }
 
   document.addEventListener("scroll", function() {
@@ -162,4 +154,4 @@
       document.querySelector(".nav-container").style.transform = "translateY(0)"
     }
   });
-})();
+};

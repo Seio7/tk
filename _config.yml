@@ -39,6 +39,7 @@ postal_code: 85283
 city: Wolnzach
 show_drafts: false
 collections_dir: collections
+exclude: [webpack, package.json, package-lock.json]
 
 defaults:
   -
