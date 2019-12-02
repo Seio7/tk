@@ -37,6 +37,15 @@ ceo: Tanja Knappe
 street: Josef-Reindl-Str.29
 postal_code: 85283
 city: Wolnzach
+show_drafts: false
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "page"
 
 # Build settings
 plugins:
