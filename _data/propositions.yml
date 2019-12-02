@@ -1,21 +1,21 @@
 items:
   anamnesis:
-    duration: 55
-    price: 45
+    duration: 60
+    price: 50
   autogenic_training:
     group:
       duration: 8 x 75 Minuten
-      price: 44
+      price: 90
     private:
       duration: 5 x 50 Minuten
-      price: 44
+      price: 119
   coaching:
-    duration: 44
-    price: 44
+    duration: 60
+    price: 70
   therapy:
     long:
-      duration: 44
-      price: 44
+      duration: 90
+      price: 90
     short:
-      duration: 44
-      price: 44
+      duration: 60
+      price: 60
