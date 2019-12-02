@@ -9,7 +9,7 @@ html(lang="de")
     include nav
     | {{ content }}
     include footer
-    include cookie-consent
+    | {% include cookie-consent.html %}
 
     script(type="text/javascript" src="{{ '/assets/js/navigation.js' | relative_url }}")
     script(type="text/javascript" src="{{ '/assets/js/netlify.js' | relative_url }}")
