@@ -38,14 +38,18 @@ street: Josef-Reindl-Str.29
 postal_code: 85283
 city: Wolnzach
 show_drafts: false
+collections_dir: collections
 
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
-      type: "pages"
+      path: ""
+      type: pages
     values:
-      layout: "page"
+      layout: page
+
+sass:
+  style: compressed
 
 # Build settings
 plugins:

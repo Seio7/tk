@@ -1,0 +1,56 @@
+#cookie-notice {
+  padding: 0.5rem 1rem;
+  display: none;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $green;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 99999;
+
+  .btn-primary {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    background-color: rgb(245, 245, 245);
+    color: #222;
+    border-radius: 5px;
+    padding: 3px 8px;
+    transition: background-color 0.12s;
+  
+    &:hover {
+      background-color: rgb(225, 225, 225);
+      color: #222 !important;
+    }
+  }
+  
+  .btn-secondary {
+    color: $green-light;
+    display: inline-block;
+    padding-left: 10px;
+    transition: color .12s;
+    &:hover {
+      background: none !important;
+      color: lighten($green-light, 5);
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      top: 0;
+      bottom: initial;
+      .btn-primary {
+        position: relative;
+        bottom: 4px;
+      }
+      span {
+        display: block;
+        padding-top: 3px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
