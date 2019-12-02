@@ -51,6 +51,7 @@ defaults:
 
 sass:
   style: compressed
+  sourcemap: never
 
 # Build settings
 plugins:
