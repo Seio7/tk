@@ -154,4 +154,12 @@
       element.classList.remove('in-transition');
     });
   }
+
+  document.addEventListener("scroll", function() {
+    if (window.pageYOffset > 50 && window.innerWidth > 1000) {
+      document.querySelector(".nav-container").style.transform = "translateY(-52px)"
+    } else {
+      document.querySelector(".nav-container").style.transform = "translateY(0)"
+    }
+  });
 })();

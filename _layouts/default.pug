@@ -5,8 +5,9 @@ doctype html
 html(lang="de")
   include head
   body(class="{{ page.title }}")
-    include header
-    include nav
+    .nav-container
+      include header
+      include nav
     | {{ content }}
     include footer
     include cookie-consent

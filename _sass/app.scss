@@ -134,6 +134,7 @@ address {
 
 .info-header-container {
   padding: 10px 0;
+  background-color: white;
 
   .info-header {
     display: flex;
@@ -466,6 +467,19 @@ nav.main-nav {
       }
     }
   }
+}
+
+#content {
+  margin-top: 225px;
+}
+
+.nav-container {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;  
+  z-index: 4999;
+  transition: transform .35s;
 }
 
 // Layout
@@ -1144,7 +1158,7 @@ footer {
 
 @media only screen and (max-width: $mobile-breakpoint) {
   #content {
-    padding-top: 102px;
+    margin-top: 102px;
   }
 
   nav.main-nav {
