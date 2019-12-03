@@ -8,6 +8,9 @@ layout: default
     img.hero-image.mobile-hidden(src="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }}" alt="Tanja Knappe")
     .mobile-hero-image.mobile-show
     | {%- endif -%}
+    | {%- if page.hero -%}
+    .hero-image-page
+    | {%- endif -%}
     .container
       .col-2-container
         .main-col
@@ -15,11 +18,11 @@ layout: default
             | {{ content }}
         .side-col.mobile-hidden
           aside.main-sidebar
-            | {%- if page.url == "/kontakt-und-termine" -%}
+            | {%- if page.sidebar == "contact" -%}
             include sidebar-contact
             | {%- else -%}
             include sidebar-primary
             | {%- endif -%}
-    | {% if page.url != "/kontakt-und-termine" %}
+    | {% if page.prefooter %}
     | {% include pre-footer %}
     | {% endif %}
