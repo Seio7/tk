@@ -96,15 +96,20 @@ export default function initNavigation() {
   }
 
   function closeMobileMenu() {
+    menu.setAttribute('aria-expanded', false);
+    button.setAttribute('aria-expanded', false);
+    container.classList.remove('toggled');
+    button.classList.remove('button-cross');
+    menu.style.height = null;
+  }
+
+  function closeMobileMenuOnBreakpoint() {
     if (window.innerWidth >= 1000 && menu.getAttribute('aria-expanded')) {
-      menu.setAttribute('aria-expanded', false);
-      button.setAttribute('aria-expanded', false);
-      container.classList.remove('toggled');
-      button.classList.remove('button-cross');
-      menu.style.height = null;
+      closeMobileMenu();
     }
   }
-  window.addEventListener('resize', closeMobileMenu);
+
+  window.addEventListener('resize', closeMobileMenuOnBreakpoint);
 
   button.onclick = function () {
     if (container.classList.contains('toggled') && !menu.classList.contains('in-transition')) {
@@ -148,10 +153,21 @@ export default function initNavigation() {
   }
 
   document.addEventListener("scroll", function() {
-    if (window.pageYOffset > 50 && window.innerWidth > 1000) {
+    if (window.pageYOffset > 50 && window.innerWidth >= 1000) {
       document.querySelector(".nav-container").style.transform = "translateY(-52px)"
     } else {
       document.querySelector(".nav-container").style.transform = "translateY(0)"
     }
   });
+
+  function closeMenuOnNavigation() {
+    const links = document.querySelectorAll(".menu-item a")
+    links.forEach(link => {
+      if (window.innerWidth <= 1000) {
+        link.addEventListener("click", closeMobileMenu, {once: true});
+      }
+    })
+  }
+  closeMenuOnNavigation();
+
 };
