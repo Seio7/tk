@@ -3,10 +3,18 @@ courses:
       email: buecherei@wolnzach.de
       institution: VHS Wolnzach
       tel: 08442 - 915408
+      open: true
+    location:
+      name: '"Sonnenwirt"'
+      street: Elsenheimer Str. 27
+      postal_code: 85283
+      city: Wolnzach
+      tel: 08442 915408
+      email: buecherei@wolnzach.de
+      title: VHS Wolnzach
     date: 10.10.2019
     duration: 8 x 75 Minuten
     extra_info: ''
-    location: '"Sonnenwirt", Elsenheimer Str. 27 in 85283 Wolnzach'
     price: 45
     time: '19:00 - 20:15 Uhr'
     title: Kurs VHS Wolnzach - Abend

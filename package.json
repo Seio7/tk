@@ -1,10 +1,9 @@
 {
   "name": "tk_jekyll",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Praxis für emotionale Gesundheit",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack --watch --env=dev | bundle exec jekyll serve --livereload",
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build"
   },
@@ -17,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Seio7/tk/issues"
   },
-  "homepage": "https://github.com/Seio7/tk#readme",
+  "homepage": "https://github.com/Seio7/tk",
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",

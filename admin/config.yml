@@ -39,8 +39,18 @@ collections:
               - {label: Uhrzeit, name: time, widget: string}
               - {label: Kursdauer, name: duration, widget: string}
               - {label: Preis, name: price, widget: number}
-              - {label: Ort, name: location, widget: string}
               - {label: Extra Info, name: extra_info, widget: string, required: false}
+              - label: Ort
+                name: location
+                widget: object
+                fields:
+                  - {label: Namenszusatz, name: name, widget: string, required: false, hint: 'z.B. "Sonnenwirt"'}
+                  - {label: Straße, name: street, widget: string}
+                  - {label: PLZ, name: postal_code, widget: number}
+                  - {label: Ort, name: city, widget: string}
+                  - {label: Telefon, name: tel, widget: string}
+                  - {label: Email, name: email, widget: string}
+                  - {label: Institution, name: title, widget: string, hint: 'z.B. "VHS Wolnzach"'}
               - label: Anmeldung
                 name: application
                 widget: object
@@ -48,7 +58,7 @@ collections:
                   - {label: Ort, name: institution, widget: string}
                   - {label: Telefon, name: tel, widget: string}
                   - {label: Email, name: email, widget: string}
-
+                  - {label: Anmeldung offen, name: open, widget: boolean}
       - label: "Preise"
         name: "propositions"
         file: "_data/propositions.yml"

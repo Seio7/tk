@@ -38,6 +38,7 @@ article.therapy-and-coaching.content-contact
       | Wenn vereinbarte Termin von Ihrer Seite nicht eingehalten werden können, dann sagen Sie bitte spätestens bis zum Abend vor Ihrem Termin am nächsten Tag ab. Sie sagen den Termin nicht ab, dann behalte ich mir vor, Ihnen diese Ausfallzeit in Rechnung in Rechnung zu stellen.
 hr.border-bottom-dotted
 article#termine.content-contact
+  | {% if site.data.course_info.courses.size > 0 %}
   h2 Autogenes Training
   | {% for course in site.data.course_info.courses %}
   section
@@ -52,7 +53,11 @@ article#termine.content-contact
           td {{ course.duration }} - #[strong {{ course.price }} €]
         tr
           td Kursort
-          td {{ course.location }}
+          td 
+            | {% if course.location.name != empty %}
+            | {{ course.location.name | smartify }}, 
+            | {% endif %}
+            | {{ course.location.street }} in {{ course.location.postal_code }} {{ course.location.city }}
             | {% if course.extra_info != empty %}
             br
             strong {{ course.extra_info }}
@@ -60,6 +65,7 @@ article#termine.content-contact
         tr
           td Anmeldung
           td
+            | {% if course.application.open %}
             strong {{ course.application.institution }}
             br
             strong Telefon: 
@@ -68,4 +74,8 @@ article#termine.content-contact
             strong E-Mail: 
             | {{ course.application.email }}
             br
+            | {% else %}
+            em Anmeldung erst in Kürze möglich
+            | {% endif %}
   | {% endfor %}
+  | {% endif %}
