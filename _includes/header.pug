@@ -8,11 +8,11 @@ section.info-header-container.mobile-hidden
         span.icon-tel
         a(href="{{ site.tel_link }}") {{ site.tel }}
       .spacer
-      a.emergency(href="/notfall") Notfall
-      a(href="/online-terminkalender")
+      a.emergency(href="{% link emergency.pug %}") Notfall
+      a(href="{% link calendar.pug %}")
         button.btn-cta Termin vereinbaren
 section.brand-area-container.mobile-hidden
   .container
     .brand-area
-      a.logo-container(href="/")
+      a.logo-container(href="{% link index.pug %}")
         img.logo(src="{{ 'assets/images/logo.png' | relative_url }}" alt="Praxis für emotionale Gesundheit Logo")
