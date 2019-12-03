@@ -16,6 +16,9 @@ module.exports = {
           path.resolve(__dirname, "node_modules"),
           path.resolve(__dirname, "bower_components"),
         ],
+        include: [
+          path.resolve(__dirname, 'node_modules', '@dogstudio', 'highway')
+        ],
         use: {
           loader: 'babel-loader',
           options: {

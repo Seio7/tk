@@ -317,7 +317,7 @@ nav.main-nav {
             display: block;
             animation-name: fadein;
             animation-delay: 0;
-            animation-duration: 0.2s;
+            animation-duration: 0.5s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
           }
@@ -1147,10 +1147,12 @@ footer {
 @keyframes fadein {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
 
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

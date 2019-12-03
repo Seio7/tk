@@ -745,8 +745,6 @@ a:active {
 .comment-content:after,
 .site-header:before,
 .site-header:after,
-#content:before,
-#content:after,
 .site-footer:before,
 .site-footer:after {
   content: "";
@@ -758,7 +756,6 @@ a:active {
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
-#content:after,
 .site-footer:after {
   clear: both;
 }

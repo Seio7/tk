@@ -2,21 +2,22 @@
 layout: default
 ---
 
-#content
-  | {%- if page.url == "/" -%}
-  img.hero-image.mobile-hidden(src="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }}" alt="Tanja Knappe")
-  .mobile-hero-image.mobile-show
-  | {%- endif -%}
-  .container
-    .col-2-container
-      .main-col
-        main
-          | {{ content }}
-      .side-col.mobile-hidden
-        aside.main-sidebar
-          | {%- if page.url == "/kontakt-und-termine" -%}
-          include sidebar-contact
-          | {%- else -%}
-          include sidebar-primary
-          | {%- endif -%}
-| {% include pre-footer %}
+#content(data-router-wrapper)
+  .router-view(data-router-view="{{ page.name | split: '.' | first }}")
+    | {%- if page.url == "/" -%}
+    img.hero-image.mobile-hidden(src="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }}" alt="Tanja Knappe")
+    .mobile-hero-image.mobile-show
+    | {%- endif -%}
+    .container
+      .col-2-container
+        .main-col
+          main
+            | {{ content }}
+        .side-col.mobile-hidden
+          aside.main-sidebar
+            | {%- if page.url == "/kontakt-und-termine" -%}
+            include sidebar-contact
+            | {%- else -%}
+            include sidebar-primary
+            | {%- endif -%}
+    | {% include pre-footer %}
