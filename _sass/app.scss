@@ -79,7 +79,7 @@ ul {
 }
 
 article {
-  padding: 55px 0 10px;
+  padding: 55px 0;
 }
 
 hr {
@@ -798,9 +798,7 @@ main {
 
 .content-contact {
   .main-col {
-    @media only screen and (min-width: $mobile-breakpoint) {
-      padding-bottom: 50px;
-    }
+    padding-bottom: 50px;
   }
 
   .contact-info {

@@ -20,4 +20,6 @@ layout: default
             | {%- else -%}
             include sidebar-primary
             | {%- endif -%}
+    | {% if page.url != "/kontakt-und-termine" %}
     | {% include pre-footer %}
+    | {% endif %}
