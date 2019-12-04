@@ -18,11 +18,11 @@ layout: default
             | {{ content }}
         .side-col.mobile-hidden
           aside.main-sidebar
-            | {%- if page.sidebar == "contact" -%}
+            | {%- if page.url == "/kontakt-und-termine" -%}
             include sidebar-contact
             | {%- else -%}
             include sidebar-primary
             | {%- endif -%}
-    | {% if page.prefooter %}
+    | {% if page.url != "/kontakt-und-termine" %}
     | {% include pre-footer %}
     | {% endif %}
