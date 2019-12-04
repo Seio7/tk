@@ -54,4 +54,17 @@ export default () => {
       }
     });
   })
+
+  highwayCore.on('NAVIGATE_END', ({ location }) => {
+    // Check Anchor
+    if (location.anchor) {
+      // Get element
+      const el = document.querySelector(location.anchor);
+  
+      if (el) {
+        // Scroll to element
+        window.scrollTo(el.offsetLeft, el.offsetTop);
+      }
+    }
+  });
 }
