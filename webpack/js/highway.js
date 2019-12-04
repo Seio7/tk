@@ -1,5 +1,4 @@
 import Highway from '@dogstudio/highway/src/highway';
-import Tween from 'gsap';
 
 export default () => {
   class SimpleFade extends Highway.Transition {
@@ -11,23 +10,24 @@ export default () => {
       from.remove();
   
       // Animation
-      Tween.set(to, {opacity: 0})
-      Tween.to(to, {
-          opacity: 1,
-          duration: 0.3,
-          onComplete: () => done() 
-      });
+      to.addEventListener("transitionend", () => {
+        done();
+      }, {once: true});
+      
+      window.requestAnimationFrame(() => {
+        to.style.opacity = 0;
+        window.requestAnimationFrame(() => {
+          to.style.opacity = 1;
+        })
+      })
     }
   
     out({ from, done }) {
       // Animation
-      Tween.fromTo(from, 0.5,
-        { opacity: 1 },
-        {
-          opacity: 0,
-          onComplete: () => done()
-        }
-      );
+      from.style.opacity = 0;
+      from.addEventListener("transitionend", () => {
+        done();
+      }, {once: true});
     }
   }
   

@@ -130,6 +130,10 @@ address {
   list-style: none;
 }
 
+.router-view {
+  transition: opacity .35s;
+}
+
 // Pre Navigation
 
 .info-header-container {
