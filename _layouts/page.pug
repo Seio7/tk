@@ -5,7 +5,7 @@ layout: default
 #content(data-router-wrapper)
   .router-view(data-router-view="{{ page.name | split: '.' | first }}")
     | {%- if page.url == "/" -%}
-    img.hero-image.mobile-hidden(srcset="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }} 2000w, {{ 'assets/images/hero-mobile.jpg' | relative_url }} 1000w" alt="Tanja Knappe" sizes="(min-width: 1000px) 2000px, (min-width: 200px) 1000px")
+    img.hero-image.mobile-hidden(srcset="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }} 2000w, {{ 'assets/images/hero-mobile.jpg' | relative_url }} 1000w" alt="Tanja Knappe" sizes="(min-width: 1000px) 2000px, (min-width: 200px) 1000px" src="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }}")
     .mobile-hero-image.mobile-show
     | {%- endif -%}
     | {%- if page.hero -%}
