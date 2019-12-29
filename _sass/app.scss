@@ -226,7 +226,6 @@ address {
 
 nav.main-nav {
   position: relative !important;
-  border-bottom: 2px solid green;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.185);
   background-color: #fff;
   z-index: 1000;
@@ -253,6 +252,10 @@ nav.main-nav {
 
       ul {
         padding-bottom: 0;
+
+        &.menu {
+          padding-top: 0;
+        }
 
         li {
           margin: 20px;
@@ -460,16 +463,15 @@ nav.main-nav {
 }
 
 #content {
-  margin-top: 225px;
+  margin-top: 210px;
 }
 
 .nav-container {
-  position: fixed !important;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;  
   z-index: 4999;
-  transition: transform .35s;
 }
 
 // Layout
@@ -914,6 +916,7 @@ aside {
   }
 
   .autogenic-training {
+    padding: 55px 0 15px 0;
     ul {
       padding-bottom: 15px;
 

@@ -14,14 +14,14 @@ export default () => {
       Tween.set(to, {opacity: 0})
       Tween.to(to, {
           opacity: 1,
-          duration: 0.5,
+          duration: 0.4,
           onComplete: () => done() 
       });
     }
   
     out({ from, done }) {
       // Animation
-      Tween.fromTo(from, 0.5,
+      Tween.fromTo(from, 0.4,
         { opacity: 1 },
         {
           opacity: 0,
