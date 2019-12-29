@@ -2,19 +2,19 @@ courses:
   - application:
       email: buecherei@wolnzach.de
       institution: VHS Wolnzach
+      open: false
       tel: 08442 - 915408
-      open: true
+    date: 04.03.2020
+    duration: 8 x 60 Minuten
+    extra_info: 2. Stock rechts (nur Treppe)
     location:
-      name: '"Sonnenwirt"'
-      street: Elsenheimer Str. 27
-      postal_code: 85283
       city: Wolnzach
-      tel: 08442 915408
       email: buecherei@wolnzach.de
+      name: Haus des Marktes
+      postal_code: 85283
+      street: Preysingstraße 13
+      tel: 08442 915408
       title: VHS Wolnzach
-    date: 10.10.2019
-    duration: 8 x 75 Minuten
-    extra_info: ''
-    price: 45
-    time: '19:00 - 20:15 Uhr'
+    price: 37
+    time: '19:00 - 20:00 Uhr'
     title: Kurs VHS Wolnzach - Abend
