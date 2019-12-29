@@ -1,8 +1,8 @@
 courses:
   - application:
       email: buecherei@wolnzach.de
-      institution: VHS Wolnzach
-      open: false
+      institution: 'VHS Wolnzach - ANMELDUNG MÖGLICH AB: 3. Februar 2020'
+      open: true
       tel: 08442 - 915408
     date: 04.03.2020
     duration: 8 x 60 Minuten
