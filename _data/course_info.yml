@@ -6,7 +6,7 @@ courses:
       tel: 08442 - 915408
     date: 04.03.2020
     duration: 8 x 60 Minuten
-    extra_info: 2. Stock rechts (nur Treppe)
+    extra_info: ''
     location:
       city: Wolnzach
       email: buecherei@wolnzach.de
@@ -15,6 +15,6 @@ courses:
       street: Preysingstraße 13
       tel: 08442 915408
       title: VHS Wolnzach
-    price: 37
+    price: 39
     time: '19:00 - 20:00 Uhr'
     title: Kurs VHS Wolnzach - Abend
