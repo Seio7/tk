@@ -4,7 +4,7 @@ backend:
 media_folder: 'assets/uploads'
 media_library:
   name: cloudinary
-  output_filename_only: true
+  output_filename_only: false
   config:
     cloud_name: dc5q25fmj
     api_key: 128385357995845
@@ -130,12 +130,14 @@ collections:
     fields:
       - {label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog-post'}
       - {label: 'Titel', name: 'title', widget: 'string'}
-      - {label: 'Bild', name: 'featured_image', widget: 'image'}
       - {label: 'Kategorien', name: 'categories', widget: 'list'}
       - {label: 'Datum', name: 'date', widget: 'datetime'}
+      - label: 'Bild'
+        name: 'featured_image'
+        widget: 'image'
+        media_library:
+          name: cloudinary
+          output_filename_only: true
       - label: 'Inhalt' 
         name: 'body'
         widget: 'markdown'
-        media_library:
-          output_filename_only: false
-                
