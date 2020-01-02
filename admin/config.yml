@@ -115,6 +115,7 @@ collections:
     
   - name: 'blog'
     label: 'Blog Einträge'
+    label_singular: 'Blog Eintrag'
     folder: 'collections/_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
