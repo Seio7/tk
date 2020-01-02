@@ -6,7 +6,7 @@ layout: default
   .router-view(data-router-view="{{ page.name | split: '.' | first }}")
     #blog-content
       .container.container-narrow
-        a(href="{% link blog/index.html %}" style="margin-bottom: 20px; display: block") &#8249; zurück zur Übersicht
+        a(href="{% link blog/index.html %}" style="margin-bottom: 20px; display: inline-block") &#8249; zurück zur Übersicht
         .blog-post
           img(
             src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_770/{{ page.featured_image }}",

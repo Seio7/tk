@@ -2,7 +2,8 @@
 layout: blog-post
 title: Fruit Ninja
 featured_image: v1577971676/test-image-4_wpwqri.jpg
-categories: [ "Fruits" ]
+categories: 
+  - Fruits
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium. Velit sed ullamcorper morbi tincidunt ornare massa eget. Ultrices eros in cursus turpis. Habitant morbi tristique senectus et netus et malesuada. Eget gravida cum sociis natoque penatibus et magnis. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Lorem ipsum dolor sit amet consectetur adipiscing elit. Ultricies tristique nulla aliquet enim tortor at auctor urna. Cursus risus at ultrices mi. Vivamus at augue eget arcu dictum varius duis. Risus viverra adipiscing at in tellus.

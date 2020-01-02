@@ -2,7 +2,8 @@
 layout: blog-post
 title: This is a Longer Test Title
 featured_image: v1577971717/test-image-2_zbkdmy.jpg
-categories: [ "Test" ]
+categories: 
+  - Test
 ---
 
 Turpis massa tincidunt dui ut ornare. Auctor urna nunc id cursus metus. Bibendum est ultricies integer quis auctor. Pharetra magna ac placerat vestibulum lectus mauris ultrices. Pulvinar sapien et ligula ullamcorper. Consequat interdum varius sit amet mattis vulputate. Quis lectus nulla at volutpat diam ut. Elementum pulvinar etiam non quam lacus. Scelerisque in dictum non consectetur a. Amet consectetur adipiscing elit pellentesque habitant. Pulvinar neque laoreet suspendisse interdum consectetur. Facilisis magna etiam tempor orci eu lobortis. Erat velit scelerisque in dictum non. Egestas sed tempus urna et pharetra. Diam sollicitudin tempor id eu nisl nunc. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Cursus mattis molestie a iaculis at erat pellentesque. Et netus et malesuada fames ac turpis. Est velit egestas dui id ornare.

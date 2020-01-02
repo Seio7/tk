@@ -7,6 +7,14 @@
     margin-bottom: 5px;
   }
 
+  .side-col {
+    border-left: none;
+    margin-top: 53px;
+    @media only screen and (max-width: $mobile-breakpoint) {
+      margin: 0;
+    }
+  }
+
   .blog-hero-image {
     @include cover-image;
     position: relative;
@@ -19,27 +27,16 @@
     background-color: white;
     margin: 270px auto 0;
     background-image: url(https://res.cloudinary.com/dc5q25fmj/image/upload/c_scale,w_1170,f_auto/v1577971679/blog-hero_lytpxp.jpg);
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: inset 0 0 268px rgb(0, 0, 0);
+    @media only screen and (max-width: $mobile-breakpoint) {
+      margin: 170px auto 0;
     }
     h1 {
       color: whitesmoke;
-      font-size: 60px;
+      font-size: 45px;
       font-family: 'Inria Serif', serif;
-      text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
       z-index: 100;
-    }
-  }
-
-  .sidebar-blog {
-    section {
-      margin-bottom: 35px;
     }
   }
 
@@ -84,11 +81,17 @@
         }
       }
     }
+    @media only screen and (max-width: $mobile-breakpoint) {
+      padding-bottom: 0;
+    }
   }
 
   .container-narrow {
     margin-top: 270px;
     max-width: 800px;
+    @media only screen and (max-width: $mobile-breakpoint) {
+      margin-top: 170px;
+    }
   }
 
   .blog-post {
@@ -168,6 +171,30 @@
     justify-content: space-between;
     li {
       list-style: none;
+    }
+  }
+
+  .sidebar-blog {
+    section {
+      margin-bottom: 35px;
+      .category-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .pill {
+          background-color: transparentize($green-light, .4);
+          color: darken($green, 10);
+          border-radius: 20px;
+          margin-right: 8px;
+          margin-bottom: 8px;
+          padding: 4px 14px;
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+          transition: background-color .1s;
+          &:hover {
+            background-color: transparentize($green-light, .2);
+          }
+        }
+      }
     }
   }
 

@@ -30,6 +30,8 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
+    jekyll-archives (2.2.1)
+      jekyll (>= 3.6, < 5.0)
     jekyll-paginate-v2 (1.5.2)
     jekyll-pug (0.0.1)
       jekyll (>= 3.3.0)
@@ -82,6 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.0.0)
+  jekyll-archives
   jekyll-paginate-v2
   jekyll-pug
   jekyll-seo-tag

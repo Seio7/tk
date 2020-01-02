@@ -24,10 +24,8 @@ email: praxis@tanja-knappe.de
 tel: 08442 968587
 tel_link: tel:498442968587
 description: ''
-baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://www.tanja-knappe.de'
 logo: ''
-google_site_verification: 'gkmYUF0HK6isbGz66WJLWSklOIJC196zj_4AGM9QL8w'
 lang: de
 company: Praxis für emotionale Gesundheit
 ceo: Tanja Knappe
@@ -40,24 +38,25 @@ collections:
   posts:
     permalink: /blog/:categories/:title
 exclude: [webpack, package.json, package-lock.json]
+# google_site_verification: 'gkmYUF0HK6isbGz66WJLWSklOIJC196zj_4AGM9QL8w'
 
 pagination:
   enabled: true
-  per_page: 2
+  per_page: 4
   permalink: '/:num/'
   title: 'Blog'
   limit: 0
+  extension: ''
   sort_field: 'date'
   sort_reverse: true
 
-autopages:
-  enabled: false
-  categories: 
-    enabled: true
-    layouts: 
-      - 'autopage_category.html'
-    title: ':cat'
-    # permalink: '/blog/:cat'
+jekyll-archives:
+  enabled: 
+    - categories
+  layouts: 
+    category: categories
+  permalinks:
+    category: '/blog/:name/'
 
 defaults:
   -
@@ -79,6 +78,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate-v2
+  - jekyll-archives
 
 jekyll-pug:
   minify: true

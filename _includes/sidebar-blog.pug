@@ -1,4 +1,17 @@
 article.sidebar-blog
+  section.categories
+    h3 Kategorien
+    .category-container
+      | {% if page.title != "Blog" %}
+      a.pill(href="/blog")
+        | Alle
+      | {% endif %}
+      | {% for category in site.categories %}
+      | {% if page.title != category[0] %}
+      a.pill(href="/blog/{{ category[0] | downcase | replace: ' ', '-' }}")
+        | {{ category[0] }}
+      | {% endif %}
+      | {% endfor %}
   section.online-appointments
     h3 Online Terminkalender
     p Jetzt ganz einfach einen Termin online mit mir vereinbaren
