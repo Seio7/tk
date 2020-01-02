@@ -4,7 +4,6 @@ backend:
 media_folder: 'assets/uploads'
 media_library:
   name: cloudinary
-  output_filename_only: false
   config:
     cloud_name: dc5q25fmj
     api_key: 128385357995845
