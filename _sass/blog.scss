@@ -13,11 +13,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1170px;
     width: 100%;
     height: 320px;
     background-color: white;
-    margin-top: 165px;
-    background-image: url(https://res.cloudinary.com/dc5q25fmj/image/upload/c_scale,w_1920,f_auto/v1577971679/blog-hero_lytpxp.jpg);
+    margin: 270px auto 0;
+    background-image: url(https://res.cloudinary.com/dc5q25fmj/image/upload/c_scale,w_1170,f_auto/v1577971679/blog-hero_lytpxp.jpg);
     &::before {
       content: "";
       position: absolute;
