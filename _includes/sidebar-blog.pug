@@ -3,7 +3,7 @@ article.sidebar-blog
     h3 Kategorien
     .category-container
       | {% if page.title != "Blog" %}
-      a.pill(href="{{ blog/index.html }}")
+      a.pill(href="{% link blog/index.html %}")
         | Alle
       | {% endif %}
       | {% for category in site.categories %}

@@ -1,6 +1,7 @@
 import Highway from '@dogstudio/highway/src/highway';
 import Tween from 'gsap';
 import LazyLoad from 'vanilla-lazyload'
+import jump from 'jump.js'
 
 export default () => {
   const lazyLoadInstance = new LazyLoad({
@@ -51,7 +52,6 @@ export default () => {
   // This event is sent everytime a `data-router-view` is added to the DOM Tree
   highwayCore.on('NAVIGATE_IN', ({ to, location }) => {
     // update LazyLoad
-    console.log("true")
     lazyLoadInstance.update()
     // Check Active Link
     links.forEach(link => {
@@ -72,7 +72,10 @@ export default () => {
   
       if (el) {
         // Scroll to element
-        window.scrollTo(el.offsetLeft, el.offsetTop);
+        jump(el, {
+          duration: 800,
+          offset: 0,
+        });
       }
     }
   });
