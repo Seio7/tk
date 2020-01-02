@@ -93,6 +93,51 @@ button {
   border: none;
 }
 
+img.lazy {
+  opacity: 0;
+}
+
+img.loaded {
+  animation: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.img-wrapper66 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.2%;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+}
+
+.img-wrapper64 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 63.6%;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.img-wrapper39 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 39.1%;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+}
+
 .btn {
   display: flex;
   align-items: center;

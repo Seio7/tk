@@ -1,7 +1,13 @@
 import Highway from '@dogstudio/highway/src/highway';
 import Tween from 'gsap';
+import LazyLoad from 'vanilla-lazyload'
 
 export default () => {
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+  });
+
   class SimpleFade extends Highway.Transition {
     in({ from, to, done }) {
       // Reset Scroll
@@ -44,6 +50,9 @@ export default () => {
   // Listen the `NAVIGATE_IN` event
   // This event is sent everytime a `data-router-view` is added to the DOM Tree
   highwayCore.on('NAVIGATE_IN', ({ to, location }) => {
+    // update LazyLoad
+    console.log("true")
+    lazyLoadInstance.update()
     // Check Active Link
     links.forEach(link => {
       const linkParent = link.parentNode
