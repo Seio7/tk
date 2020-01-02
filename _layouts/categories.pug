@@ -25,7 +25,8 @@ layout: default
                   .blog-post-info
                     | von 
                     a(href="{% link about.pug %}") Tanja Knappe 
-                    | / {{ post.date | date: "%d.%m.%Y" }} / {{ post.categories[0] }}
+                    | / {{ post.date | date: "%d.%m.%Y" }} / 
+                    a(href="/blog/{{ post.categories[0] | downcase | replace: ' ', '-' }}") {{ post.categories[0] }}
                   .blog-post-excerpt {{ post.excerpt | truncatewords: 20 }}
                   .blog-post-link
                     a(href="{{ post.url }}") weiterlesen ›

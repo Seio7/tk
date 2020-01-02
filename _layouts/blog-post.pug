@@ -21,7 +21,10 @@ layout: default
           .blog-post-frontmatter
             h1 {{ page.title }}
             .blog-post-info
-              | von Tanja Knappe / {{ page.date | date: "%d.%m.%Y" }} / {{ page.categories[0] }}
+              | von 
+              a(href="{% link about.pug %}") Tanja Knappe 
+              | / {{ page.date | date: "%d.%m.%Y" }} / 
+              a(href="/blog/{{ page.categories[0] | downcase | replace: ' ', '-' }}") {{ page.categories[0] }}
             hr.short-centered
           .blog-post-content
             | {{ content | markdownify }}

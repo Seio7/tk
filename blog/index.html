@@ -18,7 +18,7 @@ pagination:
         </div>
       </a>
       <h3>{{ post.title }}</h3>
-      <div class="blog-post-info">von <a href="{% link about.pug %}">Tanja Knappe </a>/ {{ post.date | date: "%d.%m.%Y" }} / {{ post.categories[0] }}</div>
+      <div class="blog-post-info">von <a href="{% link about.pug %}">Tanja Knappe </a>/ {{ post.date | date: "%d.%m.%Y" }} / <a href="/blog/{{ post.categories[0] }}">{{ post.categories[0] }}</a></div>
       <div class="blog-post-excerpt">{{ post.excerpt | truncatewords: 20 }}</div>
       <div class="blog-post-link"><a href="{{ post.url }}">weiterlesen ›</a></div>
   </div>
