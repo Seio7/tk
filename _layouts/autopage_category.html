@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div id="content" data-router-wrapper="data-router-wrapper">
+  <div class="router-view" data-router-view="{{ page.name | split: '.' | first }}">
+      <div id="blog-content">
+          <div class="blog-hero-image">
+            <h1 class="page-heading">AutoPage Category <b>{% if page.autopages %}{{page.autopage.display_name}}{% endif %}</b> Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}</h1>
+          </div>
+          <div class="container">
+              <div class="col-2-container">
+                  <div class="main-col">
+                      <main>{{ content }}</main>
+                  </div>
+                  <div class="side-col">
+                      <aside class="main-sidebar">
+                        {% include "sidebar-blog" %}
+                      </aside>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

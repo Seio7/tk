@@ -6,7 +6,8 @@ html(lang="de")
   include head
   body(class="{{ page.title }}")
     .nav-container
-      include header
+      include header-info
+      include logo-stripe
       include nav
     | {{ content }}
     include footer

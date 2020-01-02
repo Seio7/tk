@@ -36,7 +36,28 @@ postal_code: 85283
 city: Wolnzach
 show_drafts: false
 collections_dir: collections
+collections:
+  posts:
+    permalink: /blog/:categories/:title
 exclude: [webpack, package.json, package-lock.json]
+
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/:num/'
+  title: 'Blog'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+autopages:
+  enabled: false
+  categories: 
+    enabled: true
+    layouts: 
+      - 'autopage_category.html'
+    title: ':cat'
+    # permalink: '/blog/:cat'
 
 defaults:
   -
@@ -57,6 +78,7 @@ plugins:
   - jekyll-pug
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate-v2
 
 jekyll-pug:
   minify: true

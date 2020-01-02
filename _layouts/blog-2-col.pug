@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+#content(data-router-wrapper)
+  .router-view(data-router-view="{{ page.name | split: '.' | first }}")
+    #blog-content
+      .blog-hero-image
+        h1 {{ page.title }}
+      .container
+        .col-2-container
+          .main-col
+            main
+              | {{ content }}
+          .side-col
+            aside.main-sidebar
+              include sidebar-blog
+    //- prefooter

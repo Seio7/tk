@@ -1,0 +1,37 @@
+---
+layout: blog-2-col
+title: Blog
+description: ""
+pagination: 
+  enabled: true
+---
+
+<article class="blog-main-content">
+  <h2>Alle Posts</h2>
+  {% for post in paginator.posts %}
+  <div class="blog-post-teaser">
+      <a href="{{ post.url }}">
+          <div class="featured-image" style="background-image: url({{ post.featured_image | relative_url }});" alt="{{ post.title }}"></div>
+      </a>
+      <h3>{{ post.title }}</h3>
+      <div class="blog-post-info">von <a href="{% link about.pug %}">Tanja Knappe </a>/ {{ post.date | date: "%d.%m.%Y" }} / {{ post.categories[0] }}</div>
+      <div class="blog-post-excerpt">{{ post.excerpt | truncatewords: 20 }}</div>
+      <div class="blog-post-link"><a href="{{ post.url }}">weiterlesen ›</a></div>
+  </div>
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <ul class="pager">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; neuere Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">ältere Posts &rarr;</a>
+      </li>
+      {% endif %}
+  </ul>
+  {% endif %}
+</article>

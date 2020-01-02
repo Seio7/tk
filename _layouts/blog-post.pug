@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+#content(data-router-wrapper)
+  .router-view(data-router-view="{{ page.name | split: '.' | first }}")
+    #blog-content
+      .container.container-narrow
+        a(href="{% link blog/index.html %}" style="margin-bottom: 20px; display: block") &#8249; zurück zur Übersicht
+        .blog-post
+          .featured-image.image-large(style="background-image: url({{ page.featured_image | relative_url }})", alt="{{ page.title }}")
+          .blog-post-frontmatter
+            h1 {{ page.title }}
+            .blog-post-info
+              | von Tanja Knappe / {{ page.date | date: "%d.%m.%Y" }} / {{ page.categories[0] }}
+            hr.short-centered
+          .blog-post-content
+            | {{ content }}
+            .post-nav
+              a(href="{% link blog/index.html %}") &#8249; zurück zur Übersicht
+              a(href="{{ page.next.url }}") nächster Post ›
+      .more-posts
+        .thumbnail-container
+          h2 Neue Posts
+          .post-thumbnails
+            | {% assign filtered_posts = site.posts | where_exp: "post", "post.title != page.title" %}
+            | {% for post in filtered_posts limit: 3 %}
+            .post-thumbnail
+              a(href="{{ post.url }}")
+                .thumbnail-image(style="background-image: url({{ post.featured_image | relative_url }})")
+              h4.thumbnail-title {{ post.title }}
+              a.thumbnail-link(href="{{ post.url }}") weiterlesen
+            | {% endfor %}
