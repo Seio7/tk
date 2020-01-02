@@ -5,8 +5,8 @@ media_folder: 'assets/uploads'
 media_library:
   name: cloudinary
   config:
-    cloud_name: duflpaox4
-    api_key: 215684218526566
+    cloud_name: dc5q25fmj
+    api_key: 128385357995845
 collections:
   - name: "config"
     label: "Einstellungen"
