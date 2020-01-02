@@ -9,10 +9,12 @@ layout: default
         a(href="{% link blog/index.html %}" style="margin-bottom: 20px; display: inline-block") &#8249; zurück zur Übersicht
         .blog-post
           img(
-            src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_770/{{ page.featured_image }}",
-            srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_640/{{ page.featured_image }} 640w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_400/{{ page.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_770/{{ page.featured_image }} 770w",
+            src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_770,h_510/{{ page.featured_image }}",
+            srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_424/{{ page.featured_image }} 640w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_265/{{ page.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_770,h_510/{{ page.featured_image }} 770w",
             sizes="(min-width: 680px) 770px, (min-width: 450px) 640px, (min-width: 1px) 400px",
             alt="{{ page.title }}"
+            width="770",
+            height="510"
           )
           .blog-post-frontmatter
             h1 {{ page.title }}
@@ -36,10 +38,12 @@ layout: default
               .post-thumbnail
                 a(href="{{ post.url }}")
                   img(
-                    src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400/{{ post.featured_image }}",
-                    srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_220,h_140/{{ post.featured_image }} 220w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_267/{{ post.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_420/{{ post.featured_image }} 640w",
+                    src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_255/{{ post.featured_image }}",
+                    srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_220,h_140/{{ post.featured_image }} 220w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_267/{{ post.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_407/{{ post.featured_image }} 640w",
                     sizes="(min-width: 700px) 220px, (min-width: 550px) 640px, (min-width: 1px) 400px",
-                    alt="{{ post.title }}"
+                    alt="{{ post.title }}",
+                    width="640",
+                    height="407"
                   )
                 h4.thumbnail-title {{ post.title }}
                 a.thumbnail-link(href="{{ post.url }}") weiterlesen
