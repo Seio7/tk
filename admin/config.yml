@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: 'assets/uploads'
+media_folder: '/assets/uploads'
 collections:
   - name: "config"
     label: "Einstellungen"
@@ -114,17 +114,17 @@ collections:
                       - {label: Preis, name: price, widget: number}
     
   - name: 'blog'
-    label: 'Blog'
+    label: 'Blog Einträge'
     folder: 'collections/_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog-post' }
-      - { label: 'Titel', name: 'title', widget: 'string' }
-      - { label: 'Bild', name: 'featured_image', widget: 'image' }
-      - { label: 'Kategorien', name: 'categories', widget: 'list' }
-      - { label: 'Datum', name: 'date', widget: 'datetime' }
-      - { label: 'Inhalt', name: 'body', widget: 'markdown' }
+      - {label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog-post'}
+      - {label: 'Titel', name: 'title', widget: 'string'}
+      - {label: 'Bild', name: 'featured_image', widget: 'image'}
+      - {label: 'Kategorien', name: 'categories', widget: 'list'}
+      - {label: 'Datum', name: 'date', widget: 'datetime'}
+      - {label: 'Inhalt', name: 'body', widget: 'markdown'}
                 
