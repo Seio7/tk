@@ -20,10 +20,12 @@ layout: default
               | von Tanja Knappe / {{ page.date | date: "%d.%m.%Y" }} / {{ page.categories[0] }}
             hr.short-centered
           .blog-post-content
-            | {{ content }}
+            | {{ content | markdownify }}
             .post-nav
               a(href="{% link blog/index.html %}") &#8249; zurück zur Übersicht
+              | {% if page.next %}
               a(href="{{ page.next.url }}") nächster Post ›
+              | {% endif %}
       .more-posts
         .container
           .thumbnail-container
