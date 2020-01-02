@@ -8,7 +8,12 @@ layout: default
       .container.container-narrow
         a(href="{% link blog/index.html %}" style="margin-bottom: 20px; display: block") &#8249; zurück zur Übersicht
         .blog-post
-          .featured-image.image-large(style="background-image: url({{ page.featured_image | relative_url }})", alt="{{ page.title }}")
+          img(
+            src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_770/{{ page.featured_image }}",
+            srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_640/{{ page.featured_image }} 640w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_400/{{ page.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_limit,f_auto,q_auto,w_770/{{ page.featured_image }} 770w",
+            sizes="(min-width: 680px) 770px, (min-width: 450px) 640px, (min-width: 1px) 400px",
+            alt="{{ page.title }}"
+          )
           .blog-post-frontmatter
             h1 {{ page.title }}
             .blog-post-info
@@ -20,14 +25,20 @@ layout: default
               a(href="{% link blog/index.html %}") &#8249; zurück zur Übersicht
               a(href="{{ page.next.url }}") nächster Post ›
       .more-posts
-        .thumbnail-container
-          h2 Neue Posts
-          .post-thumbnails
-            | {% assign filtered_posts = site.posts | where_exp: "post", "post.title != page.title" %}
-            | {% for post in filtered_posts limit: 3 %}
-            .post-thumbnail
-              a(href="{{ post.url }}")
-                .thumbnail-image(style="background-image: url({{ post.featured_image | relative_url }})")
-              h4.thumbnail-title {{ post.title }}
-              a.thumbnail-link(href="{{ post.url }}") weiterlesen
-            | {% endfor %}
+        .container
+          .thumbnail-container
+            h2 Neue Posts
+            .post-thumbnails
+              | {% assign filtered_posts = site.posts | where_exp: "post", "post.title != page.title" %}
+              | {% for post in filtered_posts limit: 3 %}
+              .post-thumbnail
+                a(href="{{ post.url }}")
+                  img(
+                    src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400/{{ post.featured_image }}",
+                    srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_220,h_140/{{ post.featured_image }} 220w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_267/{{ post.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_420/{{ post.featured_image }} 640w",
+                    sizes="(min-width: 700px) 220px, (min-width: 550px) 640px, (min-width: 1px) 400px",
+                    alt="{{ post.title }}"
+                  )
+                h4.thumbnail-title {{ post.title }}
+                a.thumbnail-link(href="{{ post.url }}") weiterlesen
+              | {% endfor %}

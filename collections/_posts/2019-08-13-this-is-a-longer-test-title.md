@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title: This is a Longer Test Title
-featured_image: assets/images/test-image-4.jpg
+featured_image: v1577971717/test-image-2_zbkdmy.jpg
 categories: [ "Test" ]
 ---
 

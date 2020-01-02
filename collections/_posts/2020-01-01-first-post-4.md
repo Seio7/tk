@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title: Fruit Ninja
-featured_image: assets/images/test-image-2.jpg
+featured_image: v1577971676/test-image-4_wpwqri.jpg
 categories: [ "Fruits" ]
 ---
 

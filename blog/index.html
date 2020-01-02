@@ -11,7 +11,12 @@ pagination:
   {% for post in paginator.posts %}
   <div class="blog-post-teaser">
       <a href="{{ post.url }}">
-          <div class="featured-image" style="background-image: url({{ post.featured_image | relative_url }});" alt="{{ post.title }}"></div>
+        <img
+            src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_767,h_300/{{ post.featured_image }}",
+            srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_767,h_300/{{ post.featured_image }} 767w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640/{{ post.featured_image }} 640w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_360/{{ post.featured_image }} 360w",
+            sizes="(min-width: 671px) 767px, (min-width: 380px) 640px, (min-width: 1px) 360px",
+            alt="{{ post.title }}"
+        />
       </a>
       <h3>{{ post.title }}</h3>
       <div class="blog-post-info">von <a href="{% link about.pug %}">Tanja Knappe </a>/ {{ post.date | date: "%d.%m.%Y" }} / {{ post.categories[0] }}</div>

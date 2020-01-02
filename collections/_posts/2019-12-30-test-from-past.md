@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title: Jumper
-featured_image: assets/images/test-image-1.jpg
+featured_image: v1577971721/test-image-1_xepgoi.jpg
 categories: [ "Time Travel" ]
 ---
 
