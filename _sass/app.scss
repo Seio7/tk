@@ -115,6 +115,10 @@ img.loaded {
   }
 }
 
+[class^="img-wrapper"] {
+  overflow: hidden;
+}
+
 .img-wrapper64 {
   width: 100%;
   height: 0;

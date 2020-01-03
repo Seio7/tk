@@ -63,6 +63,13 @@
     .blog-post-teaser {
       display: block;
       margin-bottom: 50px;
+      img {
+        transition: filter .15s;
+        &:hover {
+          filter: saturate(135%) brightness(102%);
+          transition: filter .35s;
+        }
+      }
       h3 {
         font-size: 22px;
         margin-top: 14px;
