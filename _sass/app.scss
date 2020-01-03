@@ -352,7 +352,7 @@ nav.main-nav {
 
     @media only screen and (min-width: $mobile-breakpoint) {
       .menu-item-has-children {
-        &:hover {
+        &:hover, :focus, :active {
           .sub-menu {
             z-index: 1;
             display: block;
