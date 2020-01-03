@@ -21,10 +21,11 @@ layout: default
           .blog-post-frontmatter
             h1 {{ page.title }}
             .blog-post-info
+              | {% assign reading_time = page.content | number_of_words | divided_by: 225.0 | round %}
               | von 
               a(href="{% link about.pug %}") Tanja Knappe 
               | / {{ page.date | date: "%d.%m.%Y" }} / 
-              a(href="/blog/{{ page.categories[0] | downcase | replace: ' ', '-' }}") {{ page.categories[0] }}
+              span Lesezeit: {{ reading_time }} {% if reading_time > 1 %}Minuten{% else %}Minute{% endif %}
             hr.short-centered
           .blog-post-content
             | {{ content | markdownify }}
