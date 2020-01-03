@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title: Fruit Ninja
-featured_image: v1577971676/test-image-4_wpwqri.jpg
+featured_image: test-image-4_d2iueq.jpg
 categories: 
   - Fruits
 ---

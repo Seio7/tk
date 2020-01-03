@@ -10,8 +10,8 @@ layout: default
         .blog-post
           .img-wrapper66
             img(
-              data-src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_770,h_510/{{ page.featured_image }}",
-              data-srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_424/{{ page.featured_image }} 640w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_265/{{ page.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_770,h_510/{{ page.featured_image }} 770w"
+              data-src="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_770,h_510/{{ page.featured_image }}",
+              data-srcset="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_1540,h_1020/{{ page.featured_image }}, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_424/{{ page.featured_image }} 640w, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_265/{{ page.featured_image }} 400w, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_770,h_510/{{ page.featured_image }} 770w"
               data-sizes="(min-width: 680px) 770px, (min-width: 450px) 640px, (min-width: 1px) 400px"
               alt="{{ page.title }}"
               width="770"
@@ -21,8 +21,7 @@ layout: default
           .blog-post-frontmatter
             h1 {{ page.title }}
             .blog-post-info
-              | {% assign reading_time = page.content | number_of_words | divided_by: 225.0 | round %}
-              | von 
+              | {% assign reading_time = page.content | number_of_words | divided_by: 225.0 | round %} 
               a(href="{% link about.pug %}") Tanja Knappe 
               | / {{ page.date | date: "%d.%m.%Y" }} / 
               span Lesezeit: {{ reading_time }} {% if reading_time > 1 %}Minuten{% else %}Minute{% endif %}
@@ -45,8 +44,8 @@ layout: default
                 a(href="{{ post.url }}" style="display: block") 
                   .img-wrapper64
                     img(
-                      data-src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_255/{{ post.featured_image }}"
-                      data-srcset="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_220,h_140/{{ post.featured_image }} 220w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_267/{{ post.featured_image }} 400w, https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_407/{{ post.featured_image }} 640w"
+                      data-src="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_255/{{ post.featured_image }}"
+                      data-srcset="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_220,h_140/{{ post.featured_image }} 220w, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_267/{{ post.featured_image }} 400w, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_center,f_auto,q_auto,w_640,h_407/{{ post.featured_image }} 640w"
                       data-sizes="(min-width: 700px) 220px, (min-width: 550px) 640px, (min-width: 1px) 400px",
                       alt="{{ post.title }}"
                       width="640"

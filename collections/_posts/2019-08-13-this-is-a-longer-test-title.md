@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title: This is a Longer Test Title
-featured_image: v1577971717/test-image-2_zbkdmy.jpg
+featured_image: test-image-2_knbd0w.jpg
 categories: 
   - Test
 ---

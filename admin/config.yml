@@ -6,8 +6,8 @@ media_library:
   name: cloudinary
   output_filename_only: true
   config:
-    cloud_name: dc5q25fmj
-    api_key: 128385357995845
+    cloud_name: dc5q25fma
+    api_key: 333743347291436
 collections:
   - name: "config"
     label: "Einstellungen"

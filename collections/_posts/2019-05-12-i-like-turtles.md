@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title: I Like Turtles
-featured_image: v1577971680/test-image-3_ifbdh4.jpg
+featured_image: test-image-3_pg6m1f.jpg
 categories:  
   - Green Friends
 ---

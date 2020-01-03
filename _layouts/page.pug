@@ -5,7 +5,7 @@ layout: default
 #content(data-router-wrapper)
   .router-view(data-router-view="{{ page.name | split: '.' | first }}")
     | {%- if page.url == "/" -%}
-    img.hero-image.mobile-hidden(srcset="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }} 2000w, {{ 'assets/images/hero-mobile.jpg' | relative_url }} 1000w" alt="Tanja Knappe" sizes="(min-width: 1000px) 2000px, (min-width: 200px) 1000px" src="{{ 'assets/images/hero-tablet-desktop.jpg' | relative_url }}")
+    img.hero-image.mobile-hidden(srcset="https://res.cloudinary.com/dc5q25fma/image/upload/f_auto,q_auto,w_1920/v1578091394/hero-tablet-desktop_wnptaq.jpg 1920w,https://res.cloudinary.com/dc5q25fma/image/upload/f_auto,q_auto,w_1280/v1578091394/hero-tablet-desktop_wnptaq.jpg 1280w,https://res.cloudinary.com/dc5q25fma/image/upload/f_auto,q_1,w_1000/v1578091394/hero-tablet-desktop_wnptaq.jpg 1000w," alt="Tanja Knappe" sizes="(min-width: 1400px) 1920px, (min-width: 1000px) 1280px,(min-width: 1px) 1000px" src="https://res.cloudinary.com/dc5q25fma/image/upload/f_auto,q_auto,w_1920/v1578091394/hero-tablet-desktop_wnptaq.jpg" width="1920" height="500")
     .mobile-hero-image.mobile-show
     | {%- endif -%}
     | {%- if page.hero -%}
