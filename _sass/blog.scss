@@ -136,10 +136,6 @@
           }
         }
         .post-thumbnail {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-content: flex-start;
           text-align: center;
           max-width: 220px;
           width: 100%;
@@ -150,8 +146,11 @@
           .thumbnail-title {
             flex-grow: 1;
             width: 100%;
-            font-size: 18px;
-            margin-bottom: 0;
+            font-size: 15px;
+            margin: 10px 0 0;
+          }
+          .thumbnail-link {
+            font-size: 13px;
           }
         }
       }

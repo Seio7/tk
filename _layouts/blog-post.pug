@@ -42,7 +42,7 @@ layout: default
               | {% assign filtered_posts = site.posts | where_exp: "post", "post.title != page.title" %}
               | {% for post in filtered_posts limit: 3 %}
               .post-thumbnail
-                a(href="{{ post.url }}" style="display: block")
+                a(href="{{ post.url }}" style="display: block") 
                   .img-wrapper64
                     img(
                       data-src="https://res.cloudinary.com/dc5q25fmj/image/upload/c_fill,g_center,f_auto,q_auto,w_400,h_255/{{ post.featured_image }}"
@@ -54,5 +54,5 @@ layout: default
                       class="lazy"
                     )
                 h4.thumbnail-title {{ post.title }}
-                a.thumbnail-link(href="{{ post.url }}") weiterlesen
+                a.thumbnail-link(href="{{ post.url }}") weiterlesen ›
               | {% endfor %}
