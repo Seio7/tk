@@ -33,6 +33,11 @@ layout: default
               | {% if page.next %}
               a(href="{{ page.next.url }}") nächster Post ›
               | {% endif %}
+            //- #disqus_thread
+            //- script(src="{{ 'assets/js/disqus.js' | relative_url }}")
+            //- noscript Sie benötigen Javascript, um die 
+            //-   a(href="https://disqus.com/?ref_noscript") Kommentare
+            //-   | von Disqus einsehen zu können
       .more-posts
         .container
           .thumbnail-container
