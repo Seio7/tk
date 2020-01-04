@@ -1,8 +1,8 @@
 export default function initNetlify() {
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user) {
+    window.netlifyIdentity.on("init", user => {
       if (!user) {
-        window.netlifyIdentity.on("login", function() {
+        window.netlifyIdentity.on("login", () => {
           document.location.href = "/admin/";
         });
       }
