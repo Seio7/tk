@@ -15,7 +15,7 @@ export default () => {
       window.scrollTo(0, 0);
   
       // Remove Old View
-      from.remove();
+      from.parentNode.removeChild(from);
   
       // Animation
       Tween.set(to, {opacity: 0})
