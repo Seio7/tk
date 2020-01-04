@@ -1,4 +1,4 @@
-import "core-js";
+import "core-js/stable/symbol";
 import regeneratorRuntime from "regenerator-runtime";
 import initNavigation from "./navigation";
 import initNetlify from "./netlify";
