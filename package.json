@@ -33,6 +33,7 @@
     "jump.js": "^1.0.2",
     "pug": "^2.0.4",
     "regenerator-runtime": "^0.13.3",
-    "vanilla-lazyload": "^12.4.0"
+    "vanilla-lazyload": "^12.4.0",
+    "whatwg-fetch": "^3.0.0"
   }
 }
