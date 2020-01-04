@@ -7,7 +7,7 @@ layout: default
     #blog-content
       .container
         a(href="{% link blog/index.html %}")
-          .blog-hero-image.lazy(style="background-image: url(https://res.cloudinary.com/dc5q25fma/image/upload/c_scale,w_1170,f_auto/v1577971679/blog-hero_lytpxp.jpg)")
+          .blog-hero-image(style="background-image: url(https://res.cloudinary.com/dc5q25fma/image/upload/c_scale,w_1170,f_auto/blog-hero_emkkly.jpg)")
             h1.page-heading Blog
         .col-2-container
           .main-col
@@ -27,7 +27,7 @@ layout: default
                     a(href="{% link about.pug %}") Tanja Knappe 
                     | / {{ post.date | date: "%d.%m.%Y" }} / 
                     a(href="/blog/{{ post.categories[0] | downcase | replace: ' ', '-' }}") {{ post.categories[0] }}
-                  .blog-post-excerpt {{ post.excerpt | truncatewords: 20 }}
+                  .blog-post-excerpt {{ post.excerpt | strip_html | truncatewords: 25 }}
                   .blog-post-link
                     a(href="{{ post.url }}") weiterlesen ›
                 | {% endfor %}
