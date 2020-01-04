@@ -19,7 +19,7 @@ pagination:
       </a>
       <h3>{{ post.title }}</h3>
       <div class="blog-post-info">von <a href="{% link about.pug %}">Tanja Knappe </a>/ {{ post.date | date: "%d.%m.%Y" }} / <a href="/blog/{{ post.categories[0] }}">{{ post.categories[0] }}</a></div>
-      <div class="blog-post-excerpt">{{ post.excerpt | truncatewords: 20 }}</div>
+      <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
       <div class="blog-post-link"><a href="{{ post.url }}">weiterlesen ›</a></div>
   </div>
   {% endfor %}

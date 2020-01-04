@@ -27,7 +27,7 @@ layout: default
               span Lesezeit: {{ reading_time }} {% if reading_time > 1 %}Minuten{% else %}Minute{% endif %}
             hr.short-centered
           .blog-post-content
-            | {{ content | markdownify }}
+            | {{ content }}
             .post-nav
               a(href="{% link blog/index.html %}") &#8249; zurück zur Übersicht
               | {% if page.next %}
