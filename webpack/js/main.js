@@ -1,4 +1,4 @@
-import "core-js/stable/symbol";
+import "core-js/stable";
 import regeneratorRuntime from "regenerator-runtime";
 import 'whatwg-fetch';
 import initNavigation from "./navigation";
