@@ -93,6 +93,10 @@ button {
   border: none;
 }
 
+img.lazy {
+  opacity: 0;
+}
+
 [data-bg] {
   opacity: 0;
 }
