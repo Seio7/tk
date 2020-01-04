@@ -154,7 +154,7 @@ export default function initNavigation() {
 
   function closeMenuOnNavigation() {
     const links = document.querySelectorAll(".menu-item a");
-    for (let link of links) {
+    for (let link of Array.from(links)) {
       window.innerWidth <= 1000 ? link.addEventListener("click", closeMobileMenu) : link.removeEventListener("click", closeMobileMenu);
     }
   }
