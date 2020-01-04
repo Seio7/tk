@@ -12,9 +12,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        // exclude: [
-        //   path.resolve(__dirname, "node_modules"),
-        // ],
+        exclude: [
+          path.resolve(__dirname, "core-js"),
+          path.resolve(__dirname, "core-js-compat"),
+          path.resolve(__dirname, "core-js", "stable", "symbol")
+        ],
         // include: [
         //   path.resolve(__dirname, 'node_modules', '@dogstudio', 'highway', 'src')
         // ],
