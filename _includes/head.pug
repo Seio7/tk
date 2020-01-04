@@ -8,7 +8,8 @@ head
   link(ref="https://fonts.googleapis.com/css?family=Arimo|Inria+Serif:700&display=swap" rel="stylesheet")
   link(rel="mask-icon" href="{{ 'assets/icons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5")
   meta(name="msapplication-TileColor" content="#ffc40d")
-  script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
+  - var d = this;d.onload = function() { var s = document.createElement("script");s.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";var b = document.querySelector("head");b.appendChild(s);}
+    
   |   {%- seo -%}
   link(rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}")
   |   {%- if jekyll.environment == 'production' and site.google_analytics -%}
