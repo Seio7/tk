@@ -14,6 +14,7 @@ module.exports = {
         test: /\.js$/,
         exclude: [
           path.resolve(__dirname, "node_modules", "core-js"),
+          path.resolve(__dirname, "node_modules", "core-js-compat")
         ],
         // include: [
         //   path.resolve(__dirname, 'node_modules', '@dogstudio', 'highway', 'src')
