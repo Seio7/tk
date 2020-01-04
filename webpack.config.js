@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   mode: "production",
   watch: false,
-  entry: path.join(__dirname, "webpack", "js", "main"),
+  entry: [path.join(__dirname, "webpack", "js", "main")],
   output: {
     filename: "[name]-bundle.js",
     path: path.resolve(__dirname, "assets/js"),
@@ -12,12 +12,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: [
-          path.resolve(__dirname, "node_modules"),
-          path.resolve(__dirname, "bower_components"),
-        ],
+        // exclude: [
+        //   path.resolve(__dirname, "node_modules"),
+        // ],
         include: [
-          path.resolve(__dirname, 'node_modules', '@dogstudio', 'highway')
+          path.resolve(__dirname, 'node_modules', '@dogstudio', 'highway', 'src')
         ],
         use: {
           loader: 'babel-loader',

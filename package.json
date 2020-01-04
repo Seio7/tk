@@ -17,13 +17,13 @@
     "url": "https://github.com/Seio7/tk/issues"
   },
   "homepage": "https://github.com/Seio7/tk",
-  "browserslist": "> 0.25%, not dead, IE 11",
+  "browserslist": "> 0.25%, not dead",
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "babel-loader": "^8.0.6",
     "cross-env": "^6.0.3",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "gsap": "^3.0.4",
     "jump.js": "^1.0.2",
     "pug": "^2.0.4",
+    "regenerator-runtime": "^0.13.3",
     "vanilla-lazyload": "^12.4.0"
   }
 }
