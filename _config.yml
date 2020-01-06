@@ -38,6 +38,9 @@ collections:
   posts:
     permalink: /blog/:categories/:title
 exclude: [webpack, package.json, package-lock.json]
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
 # google_site_verification: 'gkmYUF0HK6isbGz66WJLWSklOIJC196zj_4AGM9QL8w'
 
 pagination:
