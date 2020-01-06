@@ -71,7 +71,7 @@
       img {
         transition: filter .15s;
         &:hover {
-          filter: saturate(105%) contrast(105%) brightness(105%);
+          filter: contrast(102%) brightness(105%);
           transition: filter .35s;
         }
       }
