@@ -155,6 +155,20 @@ img.loaded {
   }
 }
 
+.img-wrapper66 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.7%;
+  margin-bottom: 20px;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+}
+
+
 .btn {
   display: flex;
   align-items: center;
