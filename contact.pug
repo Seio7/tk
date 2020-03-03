@@ -7,7 +7,7 @@ prefooter: false
 ---
 
 article.therapy-and-coaching.content-contact
-  h1 Psychotherapie & Coaching
+  h1 Psychotherapie & Psychologische Begleitung
   section
     .contact-info
       p Sie können mit mir von 
@@ -49,7 +49,11 @@ article#termine.content-contact
       tbody
         tr
           td Beginn
-          td {{ course.date }}, {{ course.time }}
+          td 
+            | {{ course.date }}, {{ course.time }} 
+            | {% if course.fully_booked %}
+            .notice Kurs ist belegt, neuer Termin auf Anfrage
+            | {% endif %}
         tr
           td Kursdauer & Kosten
           td {{ course.duration }} - #[strong {{ course.price }} €]

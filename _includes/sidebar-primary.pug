@@ -8,11 +8,14 @@ article.autogenic-training
       li
         span.session-date {{ course.date }}
         span.session-time {{ course.time }}
+        | {% if course.fully_booked %}
+        .notice Kurs belegt, neuer Termin auf Anfrage
+        | {% endif %}
       | {% endfor %}
   section.solo-sessions
     h5 Einzeltermine
     ul.solo-session-dates
-      li Individuell mit Ihnen vereinbart
+      li Werden individuell mit Ihnen vereinbart
   a(href="/kontakt-und-termine#termine") › zu den Terminen
 hr.faded
 section.online-appointments

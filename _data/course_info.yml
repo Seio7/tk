@@ -15,6 +15,7 @@ courses:
       street: Preysingstraße 13
       tel: 08442 915408
       title: VHS Wolnzach
+    fully_booked: true
     price: 39
     time: '19:00 - 20:00 Uhr'
     title: Kurs VHS Wolnzach - Abend

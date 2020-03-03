@@ -4,8 +4,8 @@ nav:
   - children:
       - title: Gesprächstherapie
         url: /mein-angebot/gespraechstherapie
-      - title: Coaching
-        url: /mein-angebot/coaching
+      - title: Psychologische Begleitung
+        url: /mein-angebot/psychologische-begleitung
       - title: Autogenes Training
         url: /mein-angebot/autogenes-training
     title: Mein Angebot
