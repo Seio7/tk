@@ -12,7 +12,7 @@ media_library:
       - fetch_format: auto
         quality: auto
         crop: fill
-        gravity: auto
+        gravity: "faces:auto"
         width: 1000
 collections:
   - name: "config"
