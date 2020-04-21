@@ -12,7 +12,7 @@ media_library:
       - fetch_format: auto
         quality: auto
         crop: fill
-        gravity: faces
+        gravity: faces:auto
         width: 1000
 collections:
   - name: "config"
@@ -131,6 +131,9 @@ collections:
     folder: 'collections/_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    media_library:
+      config:
+        output_filename_only: true
     editor:
       preview: false
     fields:
