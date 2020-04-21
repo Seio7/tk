@@ -18,7 +18,7 @@ layout: default
             //-   class="lazy"
             //-   data-src="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_faces:auto,f_auto,q_auto,w_770,h_510/{{ page.featured_image }}"
             //- )
-            {{ post.featured_image }}
+            | {{ post.featured_image }}
           .blog-post-frontmatter
             h1 {{ page.title }}
             .blog-post-info
@@ -58,7 +58,7 @@ layout: default
                     //-   class="lazy"
                     //-   data-src="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_faces:auto,f_auto,q_auto,w_400,h_255/{{ post.featured_image }}"
                     //- )
-                    {{ post.featured_image }}
+                    | {{ post.featured_image }}
                 h4.thumbnail-title {{ post.title }}
                 a.thumbnail-link(href="{{ post.url }}") weiterlesen ›
               | {% endfor %}
