@@ -20,7 +20,7 @@ layout: default
                 .blog-post-teaser
                   a(href="{{ post.url }}")
                     .img-wrapper39
-                      img(class="lazy" data-srcset="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_faces:auto,f_auto,q_auto,w_767,h_300/{{ post.featured_image }} 767w, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_faces:auto,f_auto,q_auto,w_640,h_250/{{ post.featured_image }} 640w, https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_faces:auto,f_auto,q_auto,w_360,h_141/{{ post.featured_image }} 360w" data-sizes="(min-width: 671px) 767px, (min-width: 380px) 640px, (min-width: 1px) 360px" alt="{{ post.title }}" width="767" height="300" data-src="https://res.cloudinary.com/dc5q25fma/image/upload/c_fill,g_faces:auto,f_auto,q_auto,w_767,h_300/{{ post.featured_image }}")
+                      img(src="{{ post.featured_image }}", alt="{{ post.title }}")
                   h3 {{ post.title }}
                   .blog-post-info
                     | von 
