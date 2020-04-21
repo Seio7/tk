@@ -4,10 +4,16 @@ backend:
 media_folder: 'assets/uploads'
 media_library:
   name: cloudinary
-  output_filename_only: true
+  output_filename_only: false
   config:
     cloud_name: dc5q25fma
     api_key: 333743347291436
+    default_transformations:
+      - fetch_format: auto
+        quality: auto
+        crop: fill
+        gravity: faces
+        width: 1000
 collections:
   - name: "config"
     label: "Einstellungen"
