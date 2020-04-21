@@ -20,7 +20,7 @@ layout: default
                 .blog-post-teaser
                   a(href="{{ post.url }}")
                     .img-wrapper39
-                      img(src="{{ post.featured_image }}", alt="{{ post.title }}")
+                      img(src="{{ post.featured_image | replace: 'g_faces', 'g_faces:auto' }}", alt="{{ post.title }}")
                   h3 {{ post.title }}
                   .blog-post-info
                     | von 

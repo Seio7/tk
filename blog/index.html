@@ -12,7 +12,7 @@ pagination:
   <div class="blog-post-teaser">
       <a href="{{ post.url }}">
         <div class="img-wrapper39">
-          <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+          <img src="{{ post.featured_image | replace: 'g_faces', 'g_faces:auto' }}" alt="{{ post.title }}">
         </div>
       </a>
       <h3>{{ post.title }}</h3>
