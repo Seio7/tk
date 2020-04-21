@@ -40,7 +40,7 @@ layout: default
               .post-thumbnail
                 a(href="{{ post.url }}" style="display: block") 
                   .img-wrapper64
-                    img(src="{{ page.featured_image }}", alt="{{ post.title }}")
+                    img(src="{{ post.featured_image }}", alt="{{ post.title }}")
                 h4.thumbnail-title {{ post.title }}
                 a.thumbnail-link(href="{{ post.url }}") weiterlesen ›
               | {% endfor %}
