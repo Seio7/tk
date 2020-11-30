@@ -17,5 +17,5 @@ courses:
       tel: 08442 915408
       title: VHS Wolnzach
     title: Kurs VHS Wolnzach - Abend
-    fully_booked: true
+    fully_booked: false
     extra_info: ""
