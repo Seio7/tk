@@ -5,7 +5,7 @@ courses:
     application:
       email: buecherei@wolnzach.de
       institution: VHS Wolnzach
-      open: false
+      open: true
       tel: 08442 - 915408
     duration: 8 x 60 Minuten
     location:
