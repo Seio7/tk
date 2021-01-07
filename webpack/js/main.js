@@ -8,5 +8,5 @@ import app from './app';
 
 initNavigation();
 initNetlify();
-Highway();
+// Highway();
 app();
